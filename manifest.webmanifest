@@ -1,0 +1,16 @@
+{
+  "name": "Totselecta · Fira Cambrils",
+  "short_name": "Totselecta",
+  "description": "Recollida de contactes comercials a la Fira de Cambrils",
+  "lang": "ca",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

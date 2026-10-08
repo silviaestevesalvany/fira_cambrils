@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Totselecta · Fira Cambrils</title>
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Totselecta">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="img/icon-180.png">
+  <link rel="icon" href="img/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <img src="img/logo-blanc.png" alt="Totselecta · Vins &amp; Gourmet" class="logo">
+    <p class="event">Fira Cambrils · Recollida de contactes</p>
+  </header>
+
+  <main>
+    <div id="status" class="status" hidden></div>
+
+    <form id="lead-form" novalidate autocomplete="off">
+      <section class="card">
+        <h2>Dades del client</h2>
+
+        <label class="field">
+          <span>Nom del restaurant</span>
+          <input type="text" name="restaurant" required autocapitalize="words">
+        </label>
+
+        <label class="field">
+          <span>Nom del client</span>
+          <input type="text" name="client" autocapitalize="words">
+        </label>
+
+        <label class="field">
+          <span>Població</span>
+          <input type="text" name="poblacio" autocapitalize="words">
+        </label>
+
+        <label class="field">
+          <span>Telèfon</span>
+          <input type="tel" name="telefon" inputmode="tel">
+        </label>
+
+        <label class="field">
+          <span>Correu electrònic</span>
+          <input type="email" name="email" inputmode="email" autocapitalize="off" spellcheck="false">
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Interès</h2>
+        <p class="hint">Marca els vins que li interessen</p>
+        <div id="vins" class="vins"></div>
+      </section>
+
+      <section class="card">
+        <h2>Notes</h2>
+        <label class="field">
+          <span class="sr-only">Notes</span>
+          <textarea name="notes" rows="5" placeholder="Escriu aquí qualsevol comentari…"></textarea>
+        </label>
+      </section>
+
+      <button type="submit" class="btn-primary" id="submit">Desar contacte</button>
+      <button type="button" class="btn-link" id="clear">Netejar formulari</button>
+    </form>
+
+    <section class="queue" id="queue" hidden>
+      <p><strong id="queue-count">0</strong> contacte(s) pendents d'enviar (sense connexió).</p>
+      <button type="button" class="btn-secondary" id="retry">Tornar a enviar ara</button>
+    </section>
+
+    <p class="footer-info">Enviats des d'aquest dispositiu: <strong id="sent-count">0</strong></p>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
