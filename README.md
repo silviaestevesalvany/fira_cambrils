@@ -31,12 +31,20 @@ ara*).
 Obre [`config.js`](config.js) i substitueix `ENGANXA_AQUI_LA_URL_DE_L_APPS_SCRIPT`
 per la URL copiada.
 
-### 3. Publicar l'app (GitHub Pages)
+### 3. Publicar l'app (GitHub Pages, gratis)
 
-Al repositori de GitHub: **Settings → Pages → Build and deployment** →
-*Source:* **Deploy from a branch** → branca `main` (o la que tingui el codi),
-carpeta `/ (root)`. En un minut l'app serà a
-`https://silviaestevesalvany.github.io/fira_cambrils/`.
+GitHub Pages és gratuït només si el repositori és **públic**:
+
+1. **Settings → General → Danger Zone → Change visibility → Make public**.
+2. **Settings → Pages → Build and deployment** → *Source:* **Deploy from a
+   branch** → branca `claude/totselecta-mobile-app-jplqtl`, carpeta `/ (root)`
+   → **Save**.
+3. En un o dos minuts l'app serà a
+   `https://silviaestevesalvany.github.io/fira_cambrils/`.
+
+El codi serà visible, però les dades dels clients no: són al full de càlcul.
+Comprova que el full estigui compartit com a **Restringit** (només persones
+amb accés).
 
 ### 4. Instal·lar-la als mòbils
 
